@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/estilo.css">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+  <li th:each="brand : ${marcas}">
+    <a th:href="@{Productos/marca(marca=${brand.marca})}" th:text="${brand.marca}"></a>
+  </li>
+</ul>
+</body>
+</html>

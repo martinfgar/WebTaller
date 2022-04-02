@@ -22,12 +22,20 @@ public class Controlador {
         this.gestor = gestor;
     }
     @GetMapping
-    public String greeting(Model model) {
-        model.addAttribute("marcas", gestor.listaMarcas());
+    public String greeting() {
         return "index";
     }
-    @GetMapping("/marca")
-    public String paginaMarca(@RequestParam(name="marca",required = true,defaultValue = "VALEO") String name, Model model){
+    @GetMapping("/Productos")
+    public String greeting(Model model) {
+        model.addAttribute("marcas", gestor.listaMarcas());
+        return "Productos";
+    }
+    @GetMapping("/Productos/marca")
+    public String paginaMarca(@RequestParam(name="marca",required = true,defaultValue = "TODOS") String name, Model model){
+        if (name.equals("TODOS")){
+            model.addAttribute("productos",gestor.obtenerPiezasTodas());
+            return "paginaMarca";
+        }
         model.addAttribute("productos", gestor.obtenerPiezasMarca(name));
         return "paginaMarca";
     }
