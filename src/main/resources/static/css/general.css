@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none !important;
+    color:black !important;
+    font-family:'Open Sans', sans-serif;
+}
+h6{
+    font-size: 1.0em;
+}
+img{
+    max-width:100%;
+}

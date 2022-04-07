@@ -3,6 +3,7 @@ package com.Taller.WebTaller.service;
 
 import com.Taller.WebTaller.dao.PiezaDao;
 import com.Taller.WebTaller.dao.PiezaDaoTodos;
+import com.Taller.WebTaller.modelos.Categoria;
 import com.Taller.WebTaller.modelos.Marca;
 import com.Taller.WebTaller.modelos.Pieza;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class Gestor {
     public List<Pieza> obtenerPiezasCategoria(String categoria){ return piezaDao.LeerPorCategoria(categoria);
     }
 
-    public List<Marca> listaCategorias(){return piezaDao.ListaCategorias();}
+    public List<Categoria> listaCategorias(){return piezaDao.ListaCategorias();}
 
     public List<Marca> listaMarcas(){return piezaDao.ListaMarcas();}
 

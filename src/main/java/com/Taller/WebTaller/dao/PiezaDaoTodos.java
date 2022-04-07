@@ -1,16 +1,14 @@
 package com.Taller.WebTaller.dao;
 
 
+import com.Taller.WebTaller.modelos.Categoria;
 import com.Taller.WebTaller.modelos.Marca;
 import com.Taller.WebTaller.modelos.Pieza;
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Repository
@@ -48,9 +46,9 @@ public class PiezaDaoTodos implements PiezaDao{
                 BeanPropertyRowMapper.newInstance(Marca.class));
     }
     @Override
-    public List<Marca> ListaCategorias(){
+    public List<Categoria> ListaCategorias(){
         String sql = "select nombre from categorias";
         return jdbcTemplate.query(sql,
-                BeanPropertyRowMapper.newInstance(Marca.class));
+                BeanPropertyRowMapper.newInstance(Categoria.class));
     }
 }
