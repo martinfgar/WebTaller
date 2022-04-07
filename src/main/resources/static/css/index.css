@@ -1,0 +1,38 @@
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color:inherit;
+    padding: 2em;
+}
+
+main{
+    background-color: rgba(95, 158, 160, 0.096);
+}
+.seccionTexto{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: rgba(236, 236, 236, 0.13);
+    box-shadow: 1em 1em 1em rgba(236, 236, 236, 0.6);
+}
+.cuadroImagenes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 1em;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+}
+.cuadroImagenes >img{
+    margin-top: 1em;
+}
+
+@media  (max-width:900px){
+    section{
+        grid-template-columns: auto;
+    }
+}

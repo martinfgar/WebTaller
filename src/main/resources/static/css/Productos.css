@@ -1,0 +1,56 @@
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(95, 158, 160, 0.096);
+
+}
+.menu{
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu>div{
+    margin: 1em;
+}
+
+.menuMarcas:hover .contenidoMarcas {
+    display: flex;
+    flex-direction: column;
+  }
+.menuCat:hover .contenidoCateg{
+    display: flex;
+    flex-direction: column;
+}
+.menu>div>h6{
+    color:cadetblue!important;
+}
+.listItem >a{
+    color:white!important;
+}
+.contenidoMarcas,.contenidoCateg{
+    list-style-type: none;
+    display: none;
+    text-align: center;
+    font-size: 1.1em;
+}
+section{
+    flex-grow:1;
+}
+
+@media (min-width:800px) {
+    main{
+        flex-direction: row;
+    }
+    .contenidoMarcas, .contenidoCateg{
+        display: flex;
+        flex-direction: column;
+    }
+}
