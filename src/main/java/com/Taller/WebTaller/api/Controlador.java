@@ -1,12 +1,13 @@
 package com.Taller.WebTaller.api;
 
-import com.Taller.WebTaller.modelos.Pieza;
-import com.Taller.WebTaller.service.Gestor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import com.Taller.WebTaller.modelos.Pieza;
+import com.Taller.WebTaller.service.Gestor;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,17 +28,15 @@ public class Controlador {
         model.addAttribute("categorias",gestor.listaCategorias());
         model.addAttribute("marcas", gestor.listaMarcas());
         model.addAttribute("productos",gestor.obtenerPiezasTodas());
+        model.addAttribute("marca_categoria","TODOS LOS PRODUCTOS");
         return "Productos";
     }
     @GetMapping("/Productos/marca")
-    public String paginaMarca(@RequestParam(name="marca",required = true,defaultValue = "TODOS") String name, Model model){
+    public String paginaMarca(@RequestParam(name="marca",required = true) String name, Model model){
         model.addAttribute("categorias",gestor.listaCategorias());
         model.addAttribute("marcas", gestor.listaMarcas());
-        if (name.equals("TODOS")){
-            model.addAttribute("productos",gestor.obtenerPiezasTodas());
-            return "Productos";
-        }
         model.addAttribute("productos", gestor.obtenerPiezasMarca(name));
+        model.addAttribute("marca_categoria",name);
         return "Productos";
     }
     @GetMapping("/Productos/categoria")
@@ -45,6 +44,7 @@ public class Controlador {
         model.addAttribute("categorias",gestor.listaCategorias());
         model.addAttribute("marcas", gestor.listaMarcas());
         model.addAttribute("productos",gestor.obtenerPiezasCategoria(cat));
+        model.addAttribute("marca_categoria",cat);
         return "Productos";
     }
 

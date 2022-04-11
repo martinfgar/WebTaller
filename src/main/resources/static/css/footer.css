@@ -1,43 +1,43 @@
-footer{
-    display:flex;
+footer {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em;
 }
-h6{
-    margin-bottom: 1em;
-}
-.footerSup{
+
+.footerSup {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    padding: 1em;
 }
 
-.footerCat{
+.footerCat {
     text-decoration: none;
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
 }
 
-.footerInf{
-    
-    display:flex;
+.footerInf {
+    display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 1em;
     border-top: 1px solid cadetblue;
-    width:80%
+    width: 80%
 }
-.terminos{
+
+.terminos {
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
     font-size: 0.7em;
 }
-.centro{
+
+.centro {
     border-right: 1px solid rgb(119, 119, 119);
     border-left: 1px solid rgb(119, 119, 119);
 }
