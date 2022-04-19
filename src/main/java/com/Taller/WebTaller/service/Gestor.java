@@ -36,5 +36,6 @@ public class Gestor {
 
     public List<Marca> listaMarcas(){return piezaDao.ListaMarcas();}
 
+    public Pieza obtenerPiezaPorId(int id){return piezaDao.piezaPorId(id);}
 }
 

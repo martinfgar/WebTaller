@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    background-color: rgba(95, 158, 160, 0.096);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.mapa {
+    padding: 4em;
+    background-color: rgba(95, 158, 160, 0.493);
+    height: 60%;
+}
+
+.formulario {
+    padding: 4em;
+}
+
+form {
+    width: 450px;
+    height: 60%;
+    margin: auto;
+    background-color: rgba(95, 158, 160, 0.493);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+form h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background-color: black;
+    color: white !important;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+    background-color: cadetblue;
+    color: black !important;
+}
+
+@media(max-width:480px) {
+    form {
+        width: 100%;
+    }
+}

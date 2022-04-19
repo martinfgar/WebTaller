@@ -8,15 +8,15 @@ main{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    background-color: rgba(95, 158, 160, 0.096);
+  
 
 }
 .menu{
-    background-color: #111;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    border-bottom: 1px solid cadetblue;
 }
 .menu>div{
     margin: 1em;
@@ -30,13 +30,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-.menu>div>h6{
-    color:cadetblue!important;
-}
-.listItem >a{
-    color:white!important;
-    
-}
+
 .contenidoMarcas,.contenidoCateg{
     list-style-type: none;
     display: none;
@@ -46,13 +40,15 @@ main{
 .container{
     text-align: center;
     margin: 1em;
-    width: 100%;
+    flex-grow: 1;
 }
 .titulo{
     margin: 1em;
     font-weight:400;
     font-family: 'Montserrat', sans-serif;
 }
+h6{
+text-align: center;}
 @media (min-width:800px) {
     main{
         flex-direction: row;
@@ -60,5 +56,9 @@ main{
     .contenidoMarcas, .contenidoCateg{
         display: flex;
         flex-direction: column;
+    }
+    .menu{
+        border-right: 1px solid cadetblue;
+        border-bottom: none;
     }
 }

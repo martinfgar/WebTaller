@@ -14,4 +14,5 @@ public interface PiezaDao {
     public List<Pieza> LeerPorCategoria(String categoria);
     public List<Marca> ListaMarcas();
     public List<Categoria> ListaCategorias();
+    public Pieza piezaPorId(int id);
 }

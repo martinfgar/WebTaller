@@ -32,11 +32,10 @@
   .card_title {
     font-size: 1.25rem;
     line-height: 1.1;
-    color :cadetblue;
-    font-family: 'Montserrat',sans-serif;
+    
   }
   .card_title>*{
-    color: cadetblue;
+    color:cadetblue;
     font-family: 'Montserrat',sans-serif;
   }
   

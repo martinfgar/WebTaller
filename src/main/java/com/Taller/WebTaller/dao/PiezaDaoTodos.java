@@ -18,7 +18,7 @@ public class PiezaDaoTodos implements PiezaDao{
     private JdbcTemplate jdbcTemplate;
     @Override
     public List<Pieza> LeerPiezasTodas() {
-        String sql = "SELECT marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria";
+        String sql = "SELECT id_pieza,marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria";
 
         return  jdbcTemplate.query(sql,
                 BeanPropertyRowMapper.newInstance(Pieza.class));
@@ -26,7 +26,7 @@ public class PiezaDaoTodos implements PiezaDao{
 
     @Override
     public List<Pieza> LeerPorMarca(String marca) {
-        String sql = "SELECT marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria where marca='"+marca+"'";
+        String sql = "SELECT id_pieza,marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria where marca='"+marca+"'";
 
         return  jdbcTemplate.query(sql,
                 BeanPropertyRowMapper.newInstance(Pieza.class));
@@ -34,7 +34,7 @@ public class PiezaDaoTodos implements PiezaDao{
 
     @Override
     public List<Pieza> LeerPorCategoria(String categoria) {
-        String sql = "SELECT marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria where categorias.nombre='"+categoria+"'";
+        String sql = "SELECT id_pieza,marca,modelo,precio,descripcion,stock,url,categorias.nombre as categoria FROM piezas inner join categorias on piezas.id_categoria = categorias.id_categoria where categorias.nombre='"+categoria+"'";
         return jdbcTemplate.query(sql,
                 BeanPropertyRowMapper.newInstance(Pieza.class));
     }
@@ -50,5 +50,12 @@ public class PiezaDaoTodos implements PiezaDao{
         String sql = "select nombre from categorias";
         return jdbcTemplate.query(sql,
                 BeanPropertyRowMapper.newInstance(Categoria.class));
+    }
+
+    @Override
+    public Pieza piezaPorId(int id) {
+        String sql = "select id_pieza,marca,modelo,precio,descripcion,stock,url from piezas where id_pieza="+id;
+        return  jdbcTemplate.queryForObject(sql,
+                BeanPropertyRowMapper.newInstance(Pieza.class));
     }
 }

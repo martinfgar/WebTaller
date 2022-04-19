@@ -47,6 +47,11 @@ public class Controlador {
         model.addAttribute("marca_categoria",cat);
         return "Productos";
     }
+    @GetMapping("/Productos/producto/id")
+    public String paginaIndv(@RequestParam(name="id", required = true) int id_piez,Model model){
+        model.addAttribute("producto",gestor.obtenerPiezaPorId(id_piez));
+        return "PaginaProducto";
+    }
 
 
 

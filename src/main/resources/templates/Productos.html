@@ -48,9 +48,9 @@
               <div th:each="producto : ${productos}" class="card stacked">
                   <img th:src="${producto.url}" alt="" class="card_img">
                   <div class="card_content">
-                      <h1 class="card_title" th:text="${producto.marca}"></h1>
+                      <h1 class="card_title"><a th:href="@{/Productos/producto/id(id=${producto.id_pieza})}" th:text="${producto.marca}"></a></h1>
                       <h2 class="card_subtitle" th:text="${producto.modelo}"></h2>
-                      <p class="card_price" th:text="${producto.precio}"></p>
+                      <p class="card_price" th:text="${producto.precio + '€'}"></p>
                       <p class="card_description" th:text="${producto.descripcion}"></p>
                   </div>
               </div>
