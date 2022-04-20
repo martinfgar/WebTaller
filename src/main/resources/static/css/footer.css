@@ -3,6 +3,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 2em;
+    text-align: center;
 }
 
 .footerSup {
@@ -19,6 +20,11 @@ footer {
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
+    list-style: none;
+}
+
+.footerCat>* {
+    list-style: none;
 }
 
 .footerInf {
@@ -40,4 +46,10 @@ footer {
 .centro {
     border-right: 1px solid rgb(119, 119, 119);
     border-left: 1px solid rgb(119, 119, 119);
+}
+
+@media (max-width:600px) {
+    .footerSup {
+        flex-direction: column;
+    }
 }

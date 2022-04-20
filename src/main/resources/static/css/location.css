@@ -1,77 +1,231 @@
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-main {
-    background-color: rgba(95, 158, 160, 0.096);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    height: 100%;
-}
-
-.mapa {
-    padding: 4em;
-    background-color: rgba(95, 158, 160, 0.493);
-    height: 60%;
-}
-
-.formulario {
-    padding: 4em;
-}
-
-form {
-    width: 450px;
-    height: 60%;
-    margin: auto;
-    background-color: rgba(95, 158, 160, 0.493);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-}
-
-form h2 {
-    color: white;
-    text-align: center;
-    margin: 0;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-input,
-textarea {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
-    box-sizing: border-box;
-    font-size: 17px;
-    border: none;
-}
-
-textarea {
-    min-height: 100px;
-    max-height: 200px;
-    max-width: 100%;
-}
-
-#boton {
-    background-color: black;
-    color: white !important;
-    padding: 20px;
-}
-
-#boton:hover {
-    cursor: pointer;
-    background-color: cadetblue;
-    color: black !important;
-}
-
-@media(max-width:480px) {
-    form {
-        width: 100%;
-    }
-}
+        header {
+            height: 70vh;
+            background-image: url('../Recursos/imagenes/pexels-cottonbro-4480505.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .titulo {
+            padding: 0.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-weight: 400;
+            line-height: 60px;
+            background-color: rgb(255, 255, 255);
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            color: cadetblue!important;
+        }
+        
+        .subtitulo {
+            background-color: cadetblue;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            color: white!important;
+            padding: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+        }
+        /*----------------------------*/
+        
+        .barraColor {
+            width: 100%;
+            height: 1.5vh;
+            background-color: rgba(95, 158, 160, 0.738);
+        }
+        
+        .seccionIconos {
+            width: 100%;
+            height: 30vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(181, 211, 212, 0.613);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .info {
+            width: 90vw;
+            height: 25vh;
+            background-color: rgba(95, 158, 160, 0.93);
+            border-radius: 100%;
+            margin: auto;
+            border-color: 1px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .info a {
+            width: fit-content;
+            height: fit-content;
+            max-width: 40%;
+            max-height: 40%;
+            display: flex;
+        }
+        
+        .info img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .info:hover {
+            box-shadow: 1em 1em 1em rgba(160, 160, 160, 0.596);
+            border: 1px solid rgb(66, 111, 112);
+            background-color: rgba(114, 187, 189, 0.77);
+            cursor: pointer;
+        }
+        /*-----------------*/
+        
+        .mapa {
+            width: 100%;
+            height: 80vh;
+            background-image: url('../Recursos/imagenes/spanner-ga1b5b64da_1280.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .marcoMapa {
+            width: 90%;
+            height: 60vh;
+            position: relative;
+            padding: 1em;
+            background-color: rgba(56, 95, 96, 0.753);
+            border-radius: 1%;
+        }
+        /*--------------*/
+        
+        .seccionForm {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            background-image: url('Recursos/imagenes/spanner-ga1b5b64da_1280.jpg');
+            opacity: 0.75;
+        }
+        
+        .imgseccionForm {
+            width: 100%;
+            height: 100%;
+            opacity: 0.50;
+            position: absolute;
+            size: cover;
+        }
+        
+        .seccionForm>h2 {
+            width: 75%;
+            font-size: 5vw;
+            color: white;
+            text-shadow: 0 0 5px black;
+            padding-top: 1em;
+        }
+        
+        .seccionForm>h3 {
+            width: 60%;
+            font-size: 3.5vw;
+            color: white;
+            text-shadow: 0 0 5px black;
+        }
+        /*fomr-------------------------*/
+        
+        .formulario {
+            width: 80%;
+            height: fit-content;
+            padding: 4em;
+            position: relative;
+        }
+        
+        form {
+            width: 90%;
+            height: fit-content;
+            margin: auto;
+            background-color: rgba(72, 118, 120, 0.668);
+            padding: 1em;
+            padding-top: 3em;
+            margin-bottom: 5em;
+            box-sizing: border-box;
+            border-radius: 1em;
+            text-align: center;
+            align-items: center;
+        }
+        
+        input {
+            width: 30%;
+            max-width: 90%;
+            margin-bottom: 2em;
+            padding: 1%;
+            box-sizing: border-box;
+            font-size: 1em;
+            border: none;
+        }
+        
+        textarea {
+            width: 90%;
+            height: 100%;
+            min-width: 90%;
+            max-width: 90%;
+            min-height: 35%;
+            max-height: 40%;
+            /*max-height se puede modificar a gusto*/
+            font-size: 1em;
+        }
+        
+        #boton {
+            margin-top: 5%;
+            background-color: black;
+            color: white !important;
+            padding: 1em;
+            border: 1px solid black;
+        }
+        
+        #boton:hover {
+            box-shadow: 1em 1em 1em rgba(160, 160, 160, 0.596);
+            border: 1px solid rgb(66, 111, 112);
+            background-color: rgba(114, 186, 189, 0.911);
+            cursor: pointer;
+        }
+        
+        @media screen and (max-width:600px) {
+            .formulario {
+                width: 90%;
+                padding: 1em;
+            }
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+            }
+            input {
+                width: 100%;
+            }
+            textarea {
+                width: 100%;
+                max-width: 90%;
+            }
+            #boton {
+                width: 80;
+                margin-top: 5%;
+                background-color: black;
+                color: white !important;
+                padding: 20px;
+            }
+        }
+        
+        @media (min-width:600px) {
+            .info {
+                max-width: 15%;
+            }
+        }
