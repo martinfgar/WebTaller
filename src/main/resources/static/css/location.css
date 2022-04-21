@@ -1,6 +1,6 @@
         header {
             height: 70vh;
-            background-image: url('../Recursos/imagenes/pexels-cottonbro-4480505.jpg');
+            background-image: url('../imagenes/pexels-cottonbro-4480505.jpg');
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -84,7 +84,7 @@
         .mapa {
             width: 100%;
             height: 80vh;
-            background-image: url('../Recursos/imagenes/spanner-ga1b5b64da_1280.jpg');
+            background-image: url('../imagenes/spanner-ga1b5b64da_1280.jpg');
             background-size: cover;
             background-attachment: fixed;
             display: flex;
@@ -112,7 +112,7 @@
             text-align: center;
             position: relative;
             background-size: cover;
-            background-image: url('Recursos/imagenes/spanner-ga1b5b64da_1280.jpg');
+            background-image: url('/imagenes/spanner-ga1b5b64da_1280.jpg');
             opacity: 0.75;
         }
         
