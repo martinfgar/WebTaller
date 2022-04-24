@@ -11,7 +11,7 @@ import com.Taller.WebTaller.service.Gestor;
 import java.util.List;
 
 @CrossOrigin(origins= {"*"}, allowCredentials = "false" )
-@RequestMapping("api/v1/productos")
+@RequestMapping("api/productos")
 @RestController
 public class ApiRestControlador {
 
