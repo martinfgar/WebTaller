@@ -17,7 +17,7 @@ nav{
 }
 header {
     height: 70vh;
-    background-image: url('https://www.ford.es/content/dam/guxeu/rhd/central/cars/2021-fiesta/launch/billboards/nameplate/ford-fiestaMCA-eu-RNG_01_B479_Fiesta_and_Focus_4_Car_Range_V4.0-21x9-2160x925-nb3.jpg.renditions.original.png');
+    background-image: url('/imagenes/fordFi.webp');
     background-size: cover;
     display: flex;
     flex-direction: column;
