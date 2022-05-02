@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
 });
 function getRows() {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("get", "http://localhost:8080/mecanicos.xml", true);
+	xmlhttp.open("get", "mecanicos.xml", true);
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			showResult(this);
